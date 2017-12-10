@@ -23,6 +23,9 @@ export default class Navrbar extends Component {
                         <li className="nav-item">
                             <Link className="nav-link" to="/contact">Contact</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/signin">Sign In</Link>
+                        </li>
                     </ul>
                 </div>
                 </div>
