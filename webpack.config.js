@@ -14,6 +14,7 @@ module.exports = {
                     presets: ['es2015', 'react']
                 }
             },
+            
             {
                 rules: [
                   {
@@ -32,6 +33,10 @@ module.exports = {
                     ]
                   }
                 ]
+              },
+              {
+                test: /\.svg$/,
+                loader: 'babel-loader!svg-react-loader'
               }
         ]
     }

@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
+import Image1 from '../images/logo.svg';
 
 export default class Navrbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand navbar-dark bg-dark">
             <div className="container">
-                <Link className="navbar-brand" to="/">Learning React!</Link>
+                <Link className="navbar-brand" to="/"><Image1 width={20} height={20} alt="Accufinance.com" /> Learning React!</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
