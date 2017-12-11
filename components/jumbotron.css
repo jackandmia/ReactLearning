@@ -4,4 +4,5 @@
     background-repeat: no-repeat;
     background-size: 100% auto;
     color: white;
+    text-shadow: 1px 0 0 rgb(63, 57, 57), 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Navbar from '../components/navbar.jsx';
 import SignInBox from '../components/signinbox.jsx';
+import Jumbotron from '../components/jumbotron.jsx';
 
 export default class SignIn extends Component {
     render() {
