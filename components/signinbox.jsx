@@ -14,15 +14,13 @@ export default class SignInBox extends Component {
 
     loginClick(event) {
         event.preventDefault();
-        let un = this.refs.username.value;
-        let pw = this.refs.password.value
+
         this.setState(
             {
-                username: un,
-                password: pw
-            }
+                username: this.refs.username.value,
+                password: this.refs.password.value
+            }, () => console.log(this.state)
         );
-        console.log(this.state);
     }
 
     render() {
