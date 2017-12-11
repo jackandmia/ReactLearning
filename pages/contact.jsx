@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
 import Navbar from '../components/navbar.jsx';
-
 import Jumbotron from '../components/jumbotron.jsx';
 
 export default class Contact extends Component {
