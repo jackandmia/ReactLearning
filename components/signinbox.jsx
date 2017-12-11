@@ -10,18 +10,18 @@ export default class SignInBox extends Component {
             password: '',
             rememberme: true
         }
-        alert("Done");
-
     }
 
-    login(event) {
+    loginClick(event) {
         event.preventDefault();
+        let un = this.refs.username.value;
+        let pw = this.refs.password.value
         this.setState(
             {
-                username: this.refs.username.value,
-                password: this.refs.password.value
+                username: un,
+                password: pw
             }
-        )
+        );
         console.log(this.state);
     }
 
@@ -29,9 +29,7 @@ export default class SignInBox extends Component {
         return (
             <div>
                 <div className="container">
-
-                    <form className="form-signin" onSubmit={this.login.bind(this)}>
-
+                    <form className="form-signin" onSubmit={this.loginClick.bind(this)}>
                         <control-label for="inputEmail" className="sr-only">Email address</control-label>
                         <input type="email" ref="username" id="inputEmail" className="form-control" placeholder="Email address" required autoFocus />
                         <control-label for="inputPassword" className="sr-only">Password</control-label>
