@@ -21,10 +21,13 @@ export default class Navrbar extends Component {
                             <Link className="nav-link" to="/about">About</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/contact">Contact</Link>
+                            <Link className="nav-link" to="/contact">Contact Us</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/signin">Sign In</Link>
+                            <Link className="btn btn-success navbutton" to="/register">Register</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="btn btn-primary navbutton" to="/signin">Sign In</Link>
                         </li>
                     </ul>
                 </div>

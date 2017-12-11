@@ -17,6 +17,7 @@ export default class App extends React.Component {
                         <Route path='/about' component={About} />
                         <Route path='/contact' component={Contact} />
                         <Route path="/signin" component={SignIn} />
+                        <Route path="/register" component={Home} />
                     </div>
                 </Router>
                 <Footer />
