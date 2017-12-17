@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './navbar.css';
 import Image1 from '../images/logo.svg';
 
-export default class Navrbar extends Component {
+export default class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand navbar-dark bg-dark">
