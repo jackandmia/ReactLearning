@@ -6,6 +6,7 @@ import About from './pages/about.jsx';
 import Contact from './pages/contact.jsx';
 import Footer from './components/footer.jsx';
 import SignIn from './pages/signin.jsx';
+import Register from './pages/register.jsx';
 
 export default class App extends React.Component {
     render() {
@@ -17,7 +18,7 @@ export default class App extends React.Component {
                         <Route path='/about' component={About} />
                         <Route path='/contact' component={Contact} />
                         <Route path="/signin" component={SignIn} />
-                        <Route path="/register" component={Home} />
+                        <Route path="/register" component={Register} />
                     </div>
                 </Router>
                 <Footer />
