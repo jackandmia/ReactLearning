@@ -3,7 +3,10 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.jsx',
-    output: { path: __dirname, filename: 'bundle.js' }, 
+    output: {
+      filename: 'bundle.js', 
+      path: '/dist' 
+    }, 
     module: {
         loaders: [
             {
@@ -15,7 +18,6 @@ module.exports = {
                     "plugins": ["transform-es2015-destructuring", "transform-object-rest-spread"]
                 }
             },
-            
             {
                 rules: [
                   {
@@ -40,5 +42,8 @@ module.exports = {
                 loader: 'babel-loader!svg-react-loader'
               }
         ]
+    },
+    devServer : {
+      contentBase: './dist'
     }
 };

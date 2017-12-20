@@ -3,6 +3,7 @@ import Navbar from '../components/navbar.jsx';
 import SignInBox from '../components/signinbox.jsx';
 import Jumbotron from '../components/jumbotron.jsx';
 
+
 export default class SignIn extends Component {
     render() {
         return (
@@ -10,7 +11,7 @@ export default class SignIn extends Component {
             <Navbar />
             <div className="row justify-content-md-center">
                 <div className="col-lg-4">
-                    <SignInBox /> 
+                    <SignInBox  /> 
                 </div>
             </div>   
             </div>

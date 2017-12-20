@@ -9,7 +9,9 @@ import Footer from './components/footer.jsx';
 import SignIn from './pages/signin.jsx';
 import Register from './pages/register.jsx';
 
-const userReducer = (state={username: "", password: ""}, action ) => {
+var defaultUser = {username: "", password: ""};
+
+const userReducer = (state=defaultUser, action ) => {
     switch(action.type) {
         case "USER_LOGIN": {
             state = {...state, username: action.payload.username}
@@ -38,6 +40,7 @@ store.subscribe(() => {
     console.log("store changed" , store.getState())
 });
 
+store.dispatch({ type: "USER_LOGIN", payload: {username: "james", password: "password"}})
 store.dispatch({ type: "USER_LOGIN", payload: {username: "craig", password: "password"}})
 store.dispatch({ type: "USER_LOGOUT", payload: ""})
 
