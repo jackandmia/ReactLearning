@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { combineReducers, createStore } from 'redux';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
 
 import Home from './pages/home.jsx';
 import About from './pages/about.jsx';
@@ -34,7 +34,9 @@ const reducers = combineReducers({
     roles: userRoleReducer
 })
 
-const store = createStore(reducers);
+const middleware = applyMiddleware();
+
+const store = createStore(reducers,  middleware);
 
 store.subscribe(() => {
     console.log("store changed" , store.getState())
