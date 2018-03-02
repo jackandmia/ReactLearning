@@ -11,6 +11,7 @@ const fetchData = ({method="GET",URL,data={}}) => {
 
       return fetch(URL, config)
       .then(response => {
+          console.log(response);
         return response;
       }).catch(function (e) { 
         console.log("An error has occured while calling the API. " + e); 
