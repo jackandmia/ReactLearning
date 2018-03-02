@@ -13,6 +13,8 @@ export default class SignInBox extends Component {
         }
 
         this.handleSignin = this.handleSignin.bind(this);
+        this.handleEmailChange = this.handleEmailChange.bind(this);
+        this.handlePasswordChange = this.handlePasswordChange.bind(this);
     }
 
     handleSignin(event) {
