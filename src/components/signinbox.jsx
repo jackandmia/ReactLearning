@@ -22,8 +22,8 @@ export default class SignInBox extends Component {
     }
 
     handleFormChanges() {
-        console.log("Form changed");
-    }
+        console.log("Form changed  ");
+    }   
 
     render() {
         return (
