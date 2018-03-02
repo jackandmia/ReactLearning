@@ -18,14 +18,14 @@ export default class SignInBox extends Component {
     handleSignin(event) {
         event.preventDefault();
 
-        console.log("Login button clicked!");
+        console.log(this.state);
     }
 
     handleEmailChange(e) {
-        console.log(e);
+        this.setState( { username: e.target.value } );
     }
     handlePasswordChange(e) {
-        console.log(e);
+        this.setState( { password: e.target.value } );
     }
 
     render() {
@@ -34,7 +34,7 @@ export default class SignInBox extends Component {
                 <div className="container">
                     <div className="form-signin">
                         <control-label for="inputEmail" className="sr-only">Email address</control-label>
-                        <input type="email" id="inputEmail" className="form-control" placeholder="Email address" onChange={this.handleEmailChange(this)} required autoFocus />
+                        <input type="email" id="inputEmail" className="form-control" placeholder="Email address" onChange={this.handleEmailChange} required autoFocus />
                         
                         <control-label for="inputPassword" className="sr-only">Password</control-label>
                         <input type="password" id="inputPassword" className="form-control" placeholder="Password" onChange={this.handlePasswordChange} required />
