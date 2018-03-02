@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import fetchData from '../helpers/fetchData.js';
+
 
 import './signinbox.css';
 
@@ -21,6 +23,9 @@ export default class SignInBox extends Component {
     handleSignin(event) {
         event.preventDefault();
         console.log(this.state);
+        const deployedUrl = 'http://cralis-001-site5.ftempurl.com/api/authenticate';
+
+        fetchData('POST', deployedUrl, this.state);
     }
 
     handleEmailChange(e) {
