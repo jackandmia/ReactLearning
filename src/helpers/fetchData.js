@@ -1,4 +1,5 @@
 const fetchData = ({method="GET",URL,data={}}) => {
+    console.log("Calling FetchData with URL " + URL);
     var config = {
         method: method,
         headers: { 
