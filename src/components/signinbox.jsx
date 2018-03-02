@@ -23,7 +23,7 @@ export default class SignInBox extends Component {
     handleSignin(event) {
         event.preventDefault();
         console.log(this.state);
-        var deployedUrl = `http://cralis-001-site5.ftempurl.com/api/authenticate`;
+        var deployedUrl = "http://cralis-001-site5.ftempurl.com/api/authenticate";
 
         fetchData('POST', deployedUrl, this.state);
     }
