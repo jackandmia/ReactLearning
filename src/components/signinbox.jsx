@@ -13,28 +13,47 @@ export default class SignInBox extends Component {
         }
 
         this.handleSignin = this.handleSignin.bind(this);
+        this.handleIdChanges = this.handleIdChanges.bind(this);  
+        this.handlePWChanges = this.handlePWChanges.bind(this);  
     }
 
     handleSignin(event) {
         event.preventDefault();
-
         console.log("Login button clicked!");
     }
 
-    handleFormChanges() {
-        console.log("Form changed  ");
+    handleIdChanges(e) {
+ 
+        if(!!e.target.value){
+            this.setState({
+                username:e.target.value
+            })
+        }
+
+    }   
+
+     
+    handlePWChanges(e) { 
+        if(!!e.target.value){
+            this.setState({
+                password:e.target.value
+            })
+        }
     }   
 
     render() {
+
+        console.log(this.state);
+
         return (
             <div>
                 <div className="container">
                     <div className="form-signin">
                         <control-label for="inputEmail" className="sr-only">Email address</control-label>
-                        <input type="email" id="inputEmail" className="form-control" placeholder="Email address" onChange={this.handleFormChanges} required autoFocus />
+                        <input type="email" id="inputEmail" className="form-control" placeholder="Email address" onChange={this.handleIdChanges} required autoFocus />
                         
                         <control-label for="inputPassword" className="sr-only">Password</control-label>
-                        <input type="password" id="inputPassword" className="form-control" placeholder="Password" onChange={this.handleFormChanges} required />
+                        <input type="password" id="inputPassword" className="form-control" placeholder="Password" onChange={this.handlePWChanges} required />
                         <div className="checkbox">
                             <control-label>
                                 <input type="checkbox" /> Remember me

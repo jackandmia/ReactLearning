@@ -10,20 +10,19 @@ import Register from './pages/register.jsx';
 
 export default class App extends React.Component {
     render() {
+        console.log("called");
         return (
-            <div>
+   
                 <Router>
-                    <div>
                         <Route exact path='/' component={Home} />
                         <Route path='/about' component={About} />
                         <Route path='/contact' component={Contact} />
                         <Route path="/signin" component={SignIn} />
                         <Route path="/register" component={Register} />
-                    </div>
                 </Router>
                 <Footer />
    
-            </div>
+  
         )
     }
 }
